@@ -9,54 +9,64 @@
 <body>
     <h1>Looping</h1>
 
-    <?php 
-       
-        echo "<h3>Soal No 2 Looping Array Modulo </h3>";
-        /* 
-            Soal No 7
-            Looping Array Module
-            Carilah sisa bagi dengan angka 5 dari setiap angka pada array berikut.
-            Tampung ke dalam array baru bernama $rest 
-        */
+    <?php
+    echo "<h3>Question No 2 Looping Array Modulo</h3>";
+    /* 
+        Question No 7
+        Looping Array Module
+        Find the remainder when each number in the following array is divided by 5.
+        Store the results in a new array named $rest.
+    */
 
-        $numbers = [18, 45, 29, 61, 47, 34];
-        echo "array numbers: ";
-        print_r($numbers);
-        // Lakukan Looping di sini
+    $numbers = [18, 45, 29, 61, 47, 34];
+    echo "Array numbers: ";
+    print_r($numbers);
 
-        // output nya nanti seperti ini --> [3, 0, 4, 1, 2, 4]
+    $rest = [];
+    foreach ($numbers as $number) {
+        $rest[] = $number % 5;
+    }
 
-        echo "<br>";
-        // tampilkan di sini
-        echo "Array sisa baginya adalah:  "; 
-        echo "<br>";
+    echo "<br>";
+    echo "The remainder array is:  "; 
+    print_r($rest);
+    echo "<br>";
 
-        echo "<h3> Soal No 3 Looping Asociative Array </h3>";
-        /* 
-            Soal No 8
-            Loop Associative Array
-            Terdapat data items dalam bentuk array dimensi. Buatlah data tersebut ke dalam bentuk Array Asosiatif. 
-            Setiap item memiliki key yaitu : id, name, price, description, source. 
-            
-            Output: 
-            Array ( [id] => 001 [name] => Keyboard Logitek [price] => 60000 [description] => Keyboard yang mantap untuk kantoran [source] => logitek.jpeg ) 
-            Array ( [id] => 002 [name] => Keyboard MSI [price] => 300000 [description] => Keyboard gaming MSI mekanik [source] => msi.jpeg ) 
-            Array ( [id] => 003 [name] => Mouse Genius [price] => 50000 [description] => Mouse Genius biar lebih pinter [source] => genius.jpeg ) 
-            Array ( [id] => 004 [name] => Mouse Jerry [price] => 30000 [description] => Mouse yang disukai kucing [source] => jerry.jpeg ) 
-
-        */
-
-                /* variabel code jangan diubah */
-        $items = [
-            ['001', 'Keyboard Logitek', 60000, 'Keyboard yang mantap untuk kantoran', 'logitek.jpeg'], 
-            ['002', 'Keyboard MSI', 300000, 'Keyboard gaming MSI mekanik', 'msi.jpeg'],
-            ['003', 'Mouse Genius', 50000, 'Mouse Genius biar lebih pinter', 'genius.jpeg'],
-            ['004', 'Mouse Jerry', 30000, 'Mouse yang disukai kucing', 'jerry.jpeg']
-        ];
+    echo "<h3>Question No 3 Looping Associative Array</h3>";
+    /* 
+        Question No 8
+        Loop Associative Array
+        There is data in the form of a multidimensional array. Convert this data into an Associative Array. 
+        Each item has keys: id, name, price, description, source. 
         
-        // Output: 
+        Output: 
+        Array ( [id] => 001 [name] => Keyboard Logitek [price] => 60000 [description] => Keyboard that's great for the office [source] => logitek.jpeg ) 
+        Array ( [id] => 002 [name] => Keyboard MSI [price] => 300000 [description] => MSI gaming mechanical keyboard [source] => msi.jpeg ) 
+        Array ( [id] => 003 [name] => Mouse Genius [price] => 50000 [description] => Mouse Genius to be smarter [source] => genius.jpeg ) 
+        Array ( [id] => 004 [name] => Mouse Jerry [price] => 30000 [description] => Mouse loved by cats [source] => jerry.jpeg ) 
+    */
 
-    ?>
+    $items = [
+        ['001', 'Keyboard Logitek', 60000, 'Keyboard that\'s great for the office', 'logitek.jpeg'], 
+        ['002', 'Keyboard MSI', 300000, 'MSI gaming mechanical keyboard', 'msi.jpeg'],
+        ['003', 'Mouse Genius', 50000, 'Mouse Genius to be smarter', 'genius.jpeg'],
+        ['004', 'Mouse Jerry', 30000, 'Mouse loved by cats', 'jerry.jpeg']
+    ];
+
+    // Output:
+    foreach ($items as $item) {
+        $itemAssoc = [
+            'id' => $item[0],
+            'name' => $item[1],
+            'price' => $item[2],
+            'description' => $item[3],
+            'source' => $item[4]
+        ];
+        print_r($itemAssoc);
+        echo "<br>";
+    }
+?>
+
 
 </body>
 </html>

@@ -11,12 +11,12 @@
 
     <h3>Soal No.5</h3>
     <div id="jawaban5">
-
+        Selamat datang di Universitas Teknokrat Indonesia!
     </div>
 
     <h3>Soal No.6</h3>
     <div id="jawaban6">
-
+        3, 4, 5, 6, 7
     </div>
 
 
@@ -28,17 +28,21 @@
 halaman html. Tampilkan di id jawaban5
         */
 
-        // tulis kode dibawah ini
+        function Welcome() {
+            return "Selamat datang di Universitas Teknokrat Indonesia!";
+        }
 
-        
-       
         // Soal No. 6 Fungsi Looping
         /* 
             Buatlah sebuah fungsi bernama lopping(), yang mengembalikan nilai hasil looping dari dua parameter yang dikirim.
             contoh: looping(3, 7), maka akan tampil : 3,4,5,6,7
         */
 
-        // tulis kode di sini 
+        function looping(awal, akhir) {
+            for (var i = awal; i <= akhir; i++) {
+                return i;
+            }
+        }
 
     </script>
 </body>
